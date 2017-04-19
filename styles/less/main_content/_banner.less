@@ -1,0 +1,48 @@
+.banner-block {
+    & {
+        height: 680px;
+        padding-top: 153px;
+        background: url('../../images/banner_background.jpg');
+        text-align: center;
+    }
+
+    > .title > .text {
+        font-size: 25px;
+        font-weight: @font-weight__semibold;
+        color: @color_white;
+        border-bottom: 1px solid @color_white;
+    }
+
+    > .additional {
+        margin: 26px auto 41px;
+        max-width: 210px;
+        text-transform: uppercase;
+        color: @color_white;
+    }
+
+    > .arrow {
+        & {
+            margin: 0 auto 175px;
+            .circlesvg();
+            cursor: pointer;
+            transition: all .3s ease;
+        }
+
+        &:hover {
+            background-color: @color_white;
+            color: @color_secondary;
+            box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5)
+        }
+    }
+}
+
+.info-block {
+    & {
+        color: @color_main;
+    }
+
+    > .title {
+        font-weight: @font-weight__bold;
+        font-size: 20px;
+    }
+}

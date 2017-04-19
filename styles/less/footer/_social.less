@@ -1,0 +1,32 @@
+.social-block {
+    &.content {
+        margin: 0 auto;
+        padding: 30px 0;
+    }
+    > .social-link {
+        display: table;
+        color: @color_main;
+    }
+}
+
+.social-link {
+    > .svg-cell {
+        display: table-cell;
+        width: 70px;
+    }
+
+    > .svg-cell > .svg-block {
+        .circlesvg();
+    }
+
+    > .info {
+        display: table-cell;
+        padding-left: 20px;
+        vertical-align: middle;
+    }
+
+    > .info > .title {
+        margin-bottom: 2px;
+        font-weight: @font-weight__semibold;
+    }
+}

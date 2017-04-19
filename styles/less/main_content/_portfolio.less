@@ -1,0 +1,74 @@
+.portfolio-block {
+    & {
+        position: relative;
+        padding: 60px 0;
+        border-bottom: 1px solid @color_grey;
+        text-align: center;
+    }
+
+    > .title {
+        font-size: 28px;
+        font-weight: @font-weight__semibold;
+        color: @color_main;
+    }
+
+    > .additional {
+        color: @color_main;
+        font-size: 19px;
+        font-weight: @font-weight__normal;
+    }
+
+    > .image  {
+        margin-bottom: 40px;
+        margin-top: 37px;
+    }
+
+    > .link {
+        .buttonstyle(
+            @button__height: 40px;
+            @button__width: 150px;
+            @button__background-color: @color_secondary;
+            @button__hover__background-color: @color_main;
+        );
+        margin: 0 auto;
+    }
+}
+
+.arrows-block {
+    & {
+        position: relative;
+        margin: 20px auto 0;
+        cursor: default;
+    }
+
+    &::after,
+    &::before {
+        position: absolute;
+        top: 10px;
+        display: block;
+        height: 1px;
+        width: 46%;
+        background-color: @color_grey;
+        content: '';
+    }
+
+    &::after {
+        right: 0;
+    }
+
+    > .svgi {
+        & {
+            margin: 0 5px;
+            color: @color_secondary;
+            cursor: pointer;
+        }
+
+        &:hover {
+            color: @color_main;
+        }
+    }
+
+    > .svgi.-left {
+        transform: rotate(180deg);
+    }
+}

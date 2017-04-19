@@ -1,0 +1,105 @@
+.signup-wrapper {
+    & {
+        padding: 55px 0 50px;
+        background-color: @color_main;
+        color: #fff;
+    }
+
+    > .title,
+    > .additional {
+        text-align: center;
+    }
+
+    > .title {
+        font-size: 25px;
+        font-weight: @font-weight__semibold;
+    }
+
+    > .additional {
+        margin-bottom: 42px;
+        font-size: 16px;
+    }
+}
+
+.sign-block {
+    &.content {
+        margin: 0 auto;
+        padding-top: 40px;
+        border-top: 1px solid @color_darker;
+    }
+
+    > .info {
+        display: table;
+        padding: 25px 30px;
+        background-color: @color_darker;
+        border-radius: 5px;
+    }
+
+    > .info > .svg-block,
+    .text-block > .svg-block,
+    > .info > .text,
+    .text-block > .description {
+        display: table-cell;
+        vertical-align: middle;
+    }
+
+    > .info > .text {
+        padding-left: 30px;
+        color: #a9bcbe;
+    }
+
+    > .info > .text > .link {
+        color: @color_white;
+        text-decoration: underline;
+    }
+
+    > .info > .svg-block > .svgi {
+        display: block;
+        width: 50px;
+        height: 50px;
+        color: @color_white;
+    }
+
+    .text-block {
+        display: table;
+        margin-bottom: 30px;
+    }
+
+    .text-block > .svg-block > .svgi {
+        display: block;
+        width: 40px;
+        height: 40px;
+    }
+
+    .text-block > .description {
+        padding-left: 18px;
+    }
+
+    .text-block > .description > .title {
+        font-weight: @font-weight__semibold;
+        font-size: 15px;
+    }
+}
+
+.sign-form {
+    > .input {
+        display: inline-block;
+        height: 40px;
+        width: 459px;
+        margin-right: 11px;
+        padding: 2px 20px;
+        background-color: @color_darker;
+        border: 0;
+        border-radius: 5px
+    }
+
+    > .button {
+        border: 0;
+        font-weight: @font-weight__semibold;
+        .buttonstyle(
+            @button__height: 40px;
+            @button__background-color: @color_darker;
+        );
+        display: inline-block;
+    }
+}

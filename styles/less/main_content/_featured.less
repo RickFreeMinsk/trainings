@@ -1,0 +1,43 @@
+.featured-block {
+    &.content {
+        margin: 0 auto;
+    }
+
+    > .item {
+        & {
+            padding: 60px 15px;
+            text-align: center;
+        }
+
+        &:not(:last-of-type) {
+            border-right: 1px solid #d5d5d5;
+        }
+    }
+
+    > .item > .svgi {
+        width: 70px;
+        height: 70px;
+        color: @color_secondary;
+    }
+
+    > .item > .title {
+        margin: 25px 0;
+        font-size: 20px;
+        font-weight: @font-weight__semibold;
+        color: @color_main;
+    }
+
+    > .item > .info {
+        width: 85%;
+        margin: 0 auto 30px;
+    }
+
+    > .item > .button {
+        margin: 0 auto;
+        .buttonstyle();
+    }
+}
+
+.featured-wrapper {
+    background-color: #f6f6f6;
+}

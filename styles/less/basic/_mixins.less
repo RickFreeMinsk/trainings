@@ -1,0 +1,85 @@
+.circlesvg (
+    @block__width: 70px;
+    @block__height: 70px;
+    @block__background-color: @color_secondary;
+    @block__color: #fff;
+    @svg__height: 30px;
+    @svg__width: 30px;
+) {
+    & {
+        position: relative;
+        height: @block__height;
+        width: @block__width;
+        background-color: @block__background-color;
+        color: @block__color;
+        border-radius: 50%;
+    }
+
+    > .svgi {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: @svg__height;
+        width: @svg__width;
+    }
+}
+
+.buttonstyle (
+    @button__height: 33px;
+    @button__width: 70px;
+    @button__color: #fff;
+    @button__background-color: @color_main;
+    @button__hover__background-color: @color_secondary;
+) {
+    & {
+        position: relative;
+        display: block;
+        height: @button__height;
+        width: @button__width;
+        color: @button__color;
+        background-color: @button__background-color;
+        border-radius: 5px;
+        text-decoration: none;
+        transition: background-color .3s ease;
+    }
+
+    > .text {
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-weight: @font-weight__semibold;
+        text-align: center;
+    }
+
+    &:hover {
+        background-color: @button__hover__background-color;
+    }
+}
+
+.flex-display(@display: flex) {
+    display: ~"-webkit-@{display}";
+    display: ~"-ms-@{display}box"; // IE10 uses -ms-flexbox
+    display: ~"-ms-@{display}"; // IE11
+    display: @display;
+}
+
+.justify-content(@justify: flex-start) {
+    -webkit-justify-content: @justify;
+    -ms-justify-content: @justify;
+    justify-content: @justify;
+}
+
+.align-items(@align: stretch) {
+    -webkit-align-items: @align;
+    -ms-align-items: @align;
+    align-items: @align;
+}
+
+.transform(@string) {
+    -webkit-transform: @string;
+    -moz-transform: @string;
+    -ms-transform: @string;
+    -o-transform: @string;
+}
