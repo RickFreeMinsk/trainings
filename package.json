@@ -1,0 +1,27 @@
+{
+  "name": "html_css_task1",
+  "version": "1.0.0",
+  "description": "first task",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RickFreeMinsk/html-css_task1.git"
+  },
+  "author": "David Shuster",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RickFreeMinsk/html-css_task1/issues"
+  },
+  "homepage": "https://github.com/RickFreeMinsk/html-css_task1#readme",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-less": "^1.4.1",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-svgstore": "^1.0.0",
+    "grunt-svgtojs": "^0.1.0",
+    "jit-grunt": "^0.10.0"
+  }
+}
