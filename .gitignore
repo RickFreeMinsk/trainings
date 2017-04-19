@@ -1,0 +1,4 @@
+#ignored files, that can ge generated
+# add node_modules directory
+node_modules/
+.idea/
