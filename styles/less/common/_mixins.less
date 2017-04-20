@@ -1,0 +1,24 @@
+.logo (
+    @imgage__width: 55px;
+    @title__font-size: 29px;
+    @title__text-shadow: -3px 1px #000;
+) {
+    & {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    > .img {
+        height: @imgage__width;
+        width: auto;
+    }
+
+    > .title {
+        font-size: 29px;
+        font-family: "Lucida Sans", Arial, sans-serif;
+        font-style: italic;
+        text-transform: uppercase;
+        text-shadow: @title__text-shadow;
+    }
+}

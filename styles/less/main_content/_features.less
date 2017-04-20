@@ -1,0 +1,30 @@
+.features-block {
+    & {
+        background-image: url("../../images/feature_background.png");
+        border-top: 1px solid @color__main;
+    }
+
+    > .content {
+        margin: 0 auto;
+        padding: 40px 0;
+    }
+
+    > .content > .item > .image {
+        text-align: center;
+    }
+
+    > .content > .item > .image > .svgi {
+        //TODO: Refact code
+        color: @color__main;
+        width: 75px;
+        height: 75px;
+    }
+
+    > .content > .item > .title {
+        font-family: "Segoe UI", Arial, sans-serif;
+        font-size: 27px;
+        font-weight: @font-weight__light;
+        text-transform: uppercase;
+        text-align: center;
+    }
+}
