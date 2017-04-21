@@ -14,11 +14,21 @@
         width: auto;
     }
 
-    > .title {
+    > .text {
+        color: @color__white;
+    }
+
+    > .text > .title {
         font-size: 29px;
         font-family: "Lucida Sans", Arial, sans-serif;
         font-style: italic;
         text-transform: uppercase;
         text-shadow: @title__text-shadow;
+    }
+
+    > .text > .additional {
+        text-transform: uppercase;
+        font-size: 13px;
+        font-family: "Segoe UI",Arial,sans-serif;
     }
 }
