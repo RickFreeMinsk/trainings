@@ -19,7 +19,7 @@
     }
 
     > .text > .title {
-        font-size: 29px;
+        font-size: @title__font-size;
         font-family: "Lucida Sans", Arial, sans-serif;
         font-style: italic;
         text-transform: uppercase;
@@ -27,8 +27,20 @@
     }
 
     > .text > .additional {
-        text-transform: uppercase;
-        font-size: 13px;
-        font-family: "Segoe UI",Arial,sans-serif;
+        & {
+            text-transform: uppercase;
+            font-size: 13px;
+            font-family: "Segoe UI",Arial,sans-serif;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        & {
+            background-color: @color__gray;
+        }
+
+        > .text > .additional {
+            display: none;
+        }
     }
 }

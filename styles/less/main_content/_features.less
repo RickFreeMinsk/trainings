@@ -14,7 +14,6 @@
     }
 
     > .content > .item > .image > .svgi {
-        //TODO: Refact code
         color: @color__main;
         width: 75px;
         height: 75px;
@@ -26,5 +25,16 @@
         font-weight: @font-weight__light;
         text-transform: uppercase;
         text-align: center;
+    }
+
+    @media only screen and (max-width: 768px) {
+        > .content > .item > .image > .svgi {
+            width: 65px;
+            height: 65px;
+        }
+
+        > .content > .item > .title {
+            font-size: 14px;
+        }
     }
 }

@@ -5,11 +5,11 @@
 
     > .content {
         display: flex;
+        width: 100%;
         padding: 50px 0 105px;
         flex-wrap: wrap;
         justify-content: space-between;
         align-items: flex-end;
-
     }
 
     > .content > .title {
@@ -17,6 +17,7 @@
         text-align: center;
         color: @color__main;
         font: @font-weight__light 43px "Lucida Sans", Arial, sans-serif;
+        text-transform: uppercase;
     }
 
     > .content > .images {
@@ -30,6 +31,10 @@
         left: 0;
         width: 120px;
         height: 120px;
+    }
+
+    > .content > .images > .image {
+        max-width: 100%;
     }
 }
 
@@ -74,4 +79,19 @@
         font-family: "Segoe UI", Arial, sans-serif;
         font-weight: 300;
     }
+}
+
+// !!!!!!!!!!!!!!!!!!!!!!!! Mobile !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+@media screen and (max-width: 768px) {
+    .advantages-list {
+        display: none;
+    }
+
+    .advantages-block {
+        > .content > .images {
+            width: 100%;
+        }
+    }
+
 }
