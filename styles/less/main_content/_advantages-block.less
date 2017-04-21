@@ -5,7 +5,6 @@
 
     > .content {
         display: flex;
-        width: 100%;
         padding: 50px 0 105px;
         flex-wrap: wrap;
         justify-content: space-between;
@@ -14,6 +13,7 @@
 
     > .content > .title {
         margin: 0 auto 55px;
+        flex: 1 100%;
         text-align: center;
         color: @color__main;
         font: @font-weight__light 43px "Lucida Sans", Arial, sans-serif;
@@ -69,6 +69,7 @@
     & {
         display: flex;
         align-items: center;
+        justify-content: center;
         background-color: @color__main;
         border-radius: 50%;
     }
@@ -78,6 +79,12 @@
         font-size: 19px;
         font-family: "Segoe UI", Arial, sans-serif;
         font-weight: 300;
+    }
+
+    @media screen and (max-width: 768px) {
+        > .text {
+            font-size: 14px;
+        }
     }
 }
 
@@ -89,9 +96,21 @@
     }
 
     .advantages-block {
+        > .content {
+            padding: 50px 25px 53px;
+        }
+
         > .content > .images {
             width: 100%;
         }
-    }
 
+        > .content > .title {
+            font-size: 22px;
+        }
+
+        > .content > .images > .overlay-box {
+            width: 90px;
+            height: 90px;
+        }
+    }
 }

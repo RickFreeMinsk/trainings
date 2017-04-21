@@ -13,4 +13,17 @@
         .logo();
         margin: 0 auto;
     }
+
+    @media screen and (max-width: 768px) {
+        & {
+            height: 50px;
+        }
+
+        .logo-box {
+            .logo(
+                @imgage__width: 30px;
+                @title__font-size: 18px;
+            );
+        }
+    }
 }
