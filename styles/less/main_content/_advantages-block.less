@@ -4,11 +4,11 @@
     }
 
     > .content {
-        display: flex;
+        .flex-display();
         padding: 50px 0 105px;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        align-items: flex-end;
+        .flex-wrap(wrap);
+        .justify-content(space-between);
+        .align-items(flex-end);
     }
 
     > .content > .title {
@@ -67,9 +67,9 @@
 
 .overlay-box {
     & {
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        .flex-display();
+        .align-items(center);
+        .justify-content(center);
         background-color: @color__main;
         border-radius: 50%;
     }

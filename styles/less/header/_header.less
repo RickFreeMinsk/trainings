@@ -121,16 +121,16 @@
 // Main Content
 
 .header-main {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    .flex-display();
+    .flex-wrap(wrap);
+    .justify-content(space-between);
 }
 
 .text-wrapper {
     & {
-        display: flex;
-        flex-wrap: wrap;
-        align-content: center;
+        .flex-display();
+        .flex-wrap(wrap);
+        .align-content(center);
         min-width: 400px;
         max-width: 420px;
     }
@@ -175,7 +175,7 @@
 
         > .header-navigation {
             position: static;
-            display: flex;
+            .flex-display();
         }
     }
 
