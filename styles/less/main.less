@@ -1,0 +1,43 @@
+
+//imports
+@import "common/_variables";
+@import "common/_mixins";
+@import "footer/_footer";
+@import "header/_header";
+@import "main_content/_features";
+@import "main_content/_advantages-block";
+@import "main_content/_description";
+
+//Variables
+@content__width: 1020px;
+
+// Common Styles
+
+body {
+    margin: 0;
+}
+
+.svgi {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+}
+
+.content {
+    width: @content__width;
+    margin: 0 auto;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+// !!!!!!!!!!!!!!!!!!!!!!!! Mobile !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+@media screen and (max-width: 768px) {
+    .content {
+        width: 100%;
+    }
+}

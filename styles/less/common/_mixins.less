@@ -1,0 +1,91 @@
+.logo (
+    @imgage__width: 55px;
+    @title__font-size: 29px;
+    @title__text-shadow: -3px 1px #000;
+) {
+    & {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    > .img {
+        height: @imgage__width;
+        width: auto;
+    }
+
+    > .text {
+        color: @color__white;
+    }
+
+    > .text > .title {
+        font-size: @title__font-size;
+        font-family: "Lucida Sans", Arial, sans-serif;
+        font-style: italic;
+        text-transform: uppercase;
+        text-shadow: @title__text-shadow;
+    }
+
+    > .text > .additional {
+        & {
+            text-transform: uppercase;
+            font-size: 13px;
+            font-family: "Segoe UI",Arial,sans-serif;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        & {
+            background-color: @color__gray;
+        }
+
+        > .text > .additional {
+            display: none;
+        }
+    }
+}
+
+.flex-display(@display: flex) {
+    display: ~"-webkit-@{display}";
+    display: ~"-ms-@{display}box"; // IE10 uses -ms-flexbox
+    display: ~"-ms-@{display}"; // IE11
+    display: @display;
+}
+
+.flex-wrap(@wrap: nowrap) {
+    -webkit-flex-wrap: @wrap;
+    -ms-flex-wrap: @wrap;
+    flex-wrap: @wrap;
+}
+
+.justify-content(@justify: flex-start) {
+    -webkit-justify-content: @justify;
+    -ms-justify-content: @justify;
+    justify-content: @justify;
+}
+
+.align-items(@align: stretch) {
+    -webkit-align-items: @align;
+    -ms-align-items: @align;
+    align-items: @align;
+}
+
+.align-content(@align: stretch) {
+    -webkit-align-content: @align;
+    -ms-align-content: @align;
+    align-content: @align;
+}
+
+.transition (@transition) {
+    -webkit-transition: @transition;
+    -moz-transition:    @transition;
+    -ms-transition:     @transition;
+    -o-transition:      @transition;
+}
+
+.transform(@string){
+    -webkit-transform: @string;
+    -moz-transform: 	 @string;
+    -ms-transform: 		 @string;
+    -o-transform: 		 @string;
+}

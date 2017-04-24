@@ -1,0 +1,116 @@
+.advantages-block {
+    & {
+        background-image: url("../../images/advanteges_background.jpg");
+    }
+
+    > .content {
+        .flex-display();
+        padding: 50px 0 105px;
+        .flex-wrap(wrap);
+        .justify-content(space-between);
+        .align-items(flex-end);
+    }
+
+    > .content > .title {
+        margin: 0 auto 55px;
+        flex: 1 100%;
+        text-align: center;
+        color: @color__main;
+        font: @font-weight__light 43px "Lucida Sans", Arial, sans-serif;
+        text-transform: uppercase;
+    }
+
+    > .content > .images {
+        position: relative;
+        padding-left: 50px;
+    }
+
+    > .content > .images > .overlay-box {
+        position: absolute;
+        top: -50px;
+        left: 0;
+        width: 120px;
+        height: 120px;
+    }
+
+    > .content > .images > .image {
+        max-width: 100%;
+    }
+}
+
+.advantages-list {
+    & {
+        max-width: 350px;
+    }
+
+    > .item {
+        & {
+            position: relative;
+            padding-left: 33px;
+            font-size: 22px;
+            font-family: sans-serif;
+        }
+
+        &::before {
+            position: absolute;
+            top: 8px;
+            left: 0;
+            display: block;
+            width: 15px;
+            height: 15px;
+            background-color: @color__main;
+            border-radius: 50%;
+            content: "";
+        }
+    }
+}
+
+.overlay-box {
+    & {
+        .flex-display();
+        .align-items(center);
+        .justify-content(center);
+        background-color: @color__main;
+        border-radius: 50%;
+    }
+
+    > .text {
+        text-transform: uppercase;
+        font-size: 19px;
+        font-family: "Segoe UI", Arial, sans-serif;
+        font-weight: 300;
+    }
+
+    @media screen and (max-width: 768px) {
+        > .text {
+            font-size: 14px;
+        }
+    }
+}
+
+// !!!!!!!!!!!!!!!!!!!!!!!! Mobile !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+@media screen and (max-width: 768px) {
+    .advantages-list {
+        display: none;
+    }
+
+    .advantages-block {
+        > .content {
+            padding: 50px 25px 53px;
+        }
+
+        > .content > .images {
+            width: 100%;
+        }
+
+        > .content > .title {
+            font-size: 22px;
+        }
+
+        > .content > .images > .overlay-box {
+            width: 90px;
+            height: 90px;
+        }
+    }
+}

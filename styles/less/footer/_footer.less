@@ -1,0 +1,29 @@
+.footer-container {
+    & {
+        .flex-display();
+        .align-items(center);
+        height: 70px;
+        background-color: @color__gray;
+        color: @color__white;
+        clear: both;
+        box-shadow: 1px -6px 19px -2px #000;
+    }
+
+    .logo-box {
+        .logo();
+        margin: 0 auto;
+    }
+
+    @media screen and (max-width: 768px) {
+        & {
+            height: 50px;
+        }
+
+        .logo-box {
+            .logo(
+                @imgage__width: 30px;
+                @title__font-size: 18px;
+            );
+        }
+    }
+}
