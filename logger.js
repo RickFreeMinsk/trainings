@@ -33,8 +33,12 @@
             wrapper.appendChild(block);
         }
 
-        static _externalLog(str) {
-
+        static _externalLog(str, url) {
+            url = url.length !== 0 ? url : '';
+            let req = new XMLHttpRequest();
+            req.open("POST", url, true);
+            req.setRrequestHeader("Content-type", "application/x-www-form-urlencoded");
+            req.send(str);
         }
 
         static addLogger(methodName, functionName, callback) {
