@@ -9,7 +9,7 @@ function map(array, callback) {
 
     for (let i = 0; i < length; i++) {
         let item = array[i];
-        newArray.push(callback.call(null, item, i, array));
+        newArray.push(callback(item, i, array));
     }
 
     return newArray;

@@ -4,22 +4,31 @@ class Toy {
         this.orientation = 'North';
     }
 
+    static get directions() {
+        return {
+            North: 'North',
+            South: 'South',
+            East: 'East',
+            West: 'West'
+        }
+    }
+
     move() {
         switch (this.orientation) {
-            case 'North':
+            case Toy.directions.North:
                 this.coordinates[1] += 1;
                 break;
-            case 'East':
+            case Toy.directions.East:
                 this.coordinates[0] += 1;
                 break;
-            case 'South':
+            case Toy.directions.South:
                 if ((this.coordinates[1] - 1) < 0) {
                     console.log('No negative coordinates');
                 } else {
                     this.coordinates[1] -= 1;
                 }
                 break;
-            case 'West':
+            case Toy.directions.West:
                 if ((this.coordinates[0] - 1) < 0) {
                     console.log('No negative coordinates');
                 } else {
@@ -29,56 +38,63 @@ class Toy {
             default:
                 console.log('can\'t move');
         }
+
+        return this;
     }
 
     left() {
         switch (this.orientation) {
-            case 'North':
-                this.orientation = 'West';
+            case Toy.directions.North:
+                this.orientation = Toy.directions.West;
                 break;
-            case 'East':
-                this.orientation = 'North';
+            case Toy.directions.East:
+                this.orientation = Toy.directions.North;
                 break;
-            case 'South':
-                this.orientation = 'East';
+            case Toy.directions.South:
+                this.orientation = Toy.directions.East;
                 break;
-            case 'West':
-                this.orientation = 'South';
+            case Toy.directions.West:
+                this.orientation = Toy.directions.South;
                 break;
             default:
                 console.log('can\'t move left');
         }
+
+        return this;
     }
 
     right() {
         switch (this.orientation) {
-            case 'North':
-                this.orientation = 'East';
+            case Toy.directions.North:
+                this.orientation = Toy.directions.East;
                 break;
-            case 'East':
-                this.orientation = 'South';
+            case Toy.directions.East:
+                this.orientation = Toy.directions.South;
                 break;
-            case 'South':
-                this.orientation = 'West';
+            case Toy.directions.South:
+                this.orientation = Toy.directions.West;
                 break;
-            case 'West':
-                this.orientation = 'North';
+            case Toy.directions.West:
+                this.orientation = Toy.directions.North;
                 break;
             default:
                 console.log('can\'t turn right');
         }
+
+        return this;
     }
 
     report() {
         console.log(`Toy coordinates: [${this.coordinates[0]}, ${this.coordinates[1]}]; orientation: ${this.orientation}`);
+        return this;
     }
 }
 
 let robot = new Toy();
-robot.move();
-robot.move();
-robot.move();
-robot.right();
-robot.move();
-robot.move();
-robot.report();
+robot.move()
+    .move()
+    .move()
+    .right()
+    .move()
+    .move()
+    .report();

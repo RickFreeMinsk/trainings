@@ -21,7 +21,9 @@ function findNumber (n) {
     let factors = 0,
         triangleNumber = 0;
 
-    while (factors < 500) {
+    const FACTORS_BOUNDARY = 500;
+
+    while (factors < FACTORS_BOUNDARY) {
         triangleNumber = generateNumber(n);
         if (triangleNumber % 10 === 0) {
             factors = countFactors(triangleNumber);

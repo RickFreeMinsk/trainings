@@ -9,7 +9,7 @@ function filter(array, callback) {
 
     for (let i = 0; i < length; i++) {
         let item = array[i];
-        if (callback.call(null, item, i, array)) {
+        if (callback(item, i, array)) {
             filteredArray.push(item);
         }
     }

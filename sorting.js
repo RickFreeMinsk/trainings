@@ -14,14 +14,10 @@ function partition(array, low, high) {
     for (let j = low; j < high; j++) {
         if (array[j] < pivot) {
             i++;
-            additional = array[i];
-            array[i] = array[j];
-            array[j] = additional;
+            [array[i], array[j]] = [array[j], array[i]];
         }
     }
-    additional = array[i + 1];
-    array[i + 1] = array[high];
-    array[high] = additional;
+    [array[high], array[i + 1]] = [array[i + 1], array[high]];
     return i + 1;
 }
 
